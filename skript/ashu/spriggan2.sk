@@ -1,0 +1,15 @@
+command /mobspriggan2 [<text>]:
+    trigger:
+        if arg-1 is "blast":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Blast Spriggan\"}',Health:24f,Attributes:[{Name:\"generic.attack_damage\",Base:2.5},{Name:\"generic.movement_speed\",Base:0.19}],Tags:[\"blast_variant\"],RangedSpeed:50,ProjectileData:{Effects:[{Effect:\"explosion\",Power:1.5}]}}"
+            send "&6Blast Sprigganを召喚しました。"
+        else if arg-1 is "shock":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Shock Spriggan\"}',Health:23f,Attributes:[{Name:\"generic.attack_damage\",Base:1.75},{Name:\"generic.movement_speed\",Base:0.22}],Tags:[\"shock_variant\"],RangedSpeed:30,ProjectileData:{Effects:[{Effect:\"paralysis\",Duration:100}]}}"
+            send "&3Shock Sprigganを召喚しました。"
+        else if arg-1 is "shade":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Shade Spriggan\"}',Health:22f,Attributes:[{Name:\"generic.attack_damage\",Base:3},{Name:\"generic.movement_speed\",Base:0.35}],Tags:[\"shade_variant\"],RangedSpeed:40,ProjectileData:{Effects:[{Effect:\"blindness\",Duration:120},{Effect:\"weakness\",Duration:120}]}}"
+            send "&8Shade Sprigganを召喚しました。"
+        # 他の亜種もここに入っている（省略）
+
+        else:
+            send "&7そのようなSpriggan亜種は存在しません。"
