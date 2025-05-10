@@ -1,0 +1,10 @@
+command /mobspriggan [<text>]:
+    trigger:
+        if arg-1 is "ignis":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Ignis Spriggan\"}',Health:25f,Attributes:[{Name:\"generic.attack_damage\",Base:1},{Name:\"generic.movement_speed\",Base:0.1}],Tags:[\"ignis_variant\"],RangedSpeed:40,ProjectileData:{Effects:[{Effect:\"burn\",Duration:100}]}}"
+            send "&cIgnis Sprigganを召喚しました。"
+        else if arg-1 is "golden":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Golden Spriggan\"}',Health:20f,Attributes:[{Name:\"generic.attack_damage\",Base:1},{Name:\"generic.movement_speed\",Base:0.2}],Tags:[\"golden_variant\"],RangedSpeed:20,ProjectileData:{Effects:[{Effect:\"glow\",Duration:200}]}}"
+            send "&eGolden Sprigganを召喚しました。"
+        else:
+            send "&7そのようなSpriggan亜種は存在しません。"
