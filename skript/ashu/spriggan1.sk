@@ -1,10 +1,13 @@
 command /mobspriggan [<text>]:
     trigger:
-        if arg-1 is "ignis":
-            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Ignis Spriggan\"}',Health:25f,Attributes:[{Name:\"generic.attack_damage\",Base:1},{Name:\"generic.movement_speed\",Base:0.1}],Tags:[\"ignis_variant\"],RangedSpeed:40,ProjectileData:{Effects:[{Effect:\"burn\",Duration:100}]}}"
+        if arg-1 is "frost":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Frost Spriggan\"}',Health:22f,Attributes:[{Name:\"generic.attack_damage\",Base:1.5},{Name:\"generic.movement_speed\",Base:0.15}],Tags:[\"frost_variant\"],RangedSpeed:30,ProjectileData:{Effects:[{Effect:\"slowness\",Amplifier:4,Duration:120},{Effect:\"frost\",Duration:120}]}}"
+            send "&bFrost Sprigganを召喚しました。"
+        else if arg-1 is "ignis":
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Ignis Spriggan\"}',Health:25f,Attributes:[{Name:\"generic.attack_damage\",Base:3},{Name:\"generic.movement_speed\",Base:0.19}],Tags:[\"ignis_variant\"],RangedSpeed:20,ProjectileData:{Effects:[{Effect:\"burn\",Duration:100}]}}"
             send "&cIgnis Sprigganを召喚しました。"
         else if arg-1 is "golden":
-            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Golden Spriggan\"}',Health:20f,Attributes:[{Name:\"generic.attack_damage\",Base:1},{Name:\"generic.movement_speed\",Base:0.2}],Tags:[\"golden_variant\"],RangedSpeed:20,ProjectileData:{Effects:[{Effect:\"glow\",Duration:200}]}}"
+            execute console command "summon lycanitesmobs:spriggan ~ ~ ~ {CustomName:'{\"text\":\"Golden Spriggan\"}',Health:20f,Attributes:[{Name:\"generic.attack_damage\",Base:1},{Name:\"generic.movement_speed\",Base:0.23}],Tags:[\"golden_variant\"],RangedSpeed:10,ProjectileData:{Effects:[{Effect:\"glow\",Duration:200}]}}"
             send "&eGolden Sprigganを召喚しました。"
         else:
             send "&7そのようなSpriggan亜種は存在しません。"
